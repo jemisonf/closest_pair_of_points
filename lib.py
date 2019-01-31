@@ -3,7 +3,6 @@ def read_inputs(filename):
     with open(filename) as f:
         contents = f.read()
     contents_list = contents.strip().splitlines()
-    # points_list = list([tuple(coord.split(' ')) for coord in contents_list])
     points_list = list()
     for pair in contents_list:
         coords = [int(coord) for coord in pair.split(' ')]
