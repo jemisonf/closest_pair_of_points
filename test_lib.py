@@ -3,7 +3,7 @@ import os
 
 def test_read_inputs():
     with open("testinput", "w+") as f:
-        f.write("1 0\n0 1\n2 3\n3 4\n5 6\n9 1\n8 2")
+        f.write("1 0\n0 1\n2 3\n3 4\n5 6\n9 1\n8 2\n")
 
     inputs = read_inputs("testinput")
 
