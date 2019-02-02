@@ -3,12 +3,7 @@ from statistics import median
 from sys import argv
 from typing import List, Tuple
 
-import lib
-
-
-test_data = [(1, 2), (5, 2), (8, 9), (10, 20), (11, 21), (9, 5), (19, 21)]
-test_data_2 = [(1, 2), (3, 4)]
-test_data_3 = [(1, 2), (3, 4), (5, 6)]
+from lib import read_inputs
 
 
 def closest_pair(points: List[Tuple]) -> Tuple[float, List[Tuple[Tuple]]]:
@@ -98,7 +93,7 @@ def compute_distance(point_a, point_b):
 
 if __name__ == "__main__":
     try:
-        inputs = lib.read_inputs(argv[1])
+        inputs = read_inputs(argv[1])
     except IndexError:
         exit("No input file was provided")
     print(f"inputs: {inputs}")
