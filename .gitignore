@@ -5,3 +5,5 @@ __pycache__/
 *.swp
 testinput-*
 .vscode/*
+
+enhanceddnc-output.txt
