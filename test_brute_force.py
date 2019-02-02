@@ -1,10 +1,13 @@
-from brute_force import find_closest_pairs
 import math
+
+from brute_force import find_closest_pairs
+
 
 def check_output_equality(real, desired):
     for idx, pair in enumerate(real):
         assert(pair[0] == desired[idx][0])
         assert(pair[1] == desired[idx][1])
+
 
 def main():
     testin_0 = list([[1, 0], [0, 1]])
@@ -13,19 +16,19 @@ def main():
                         [[1, 0], [0, 1]],
                     ])
 
-    testin_1 = list([[1, 0], 
-                    [1, 1],
-                    [3, 0],
-                    [3, 1],
-                    [5, 1],
-                    [6, 1],
-                ])
+    testin_1 = list([[1, 0],
+                     [1, 1],
+                     [3, 0],
+                     [3, 1],
+                     [5, 1],
+                     [6, 1],
+                     ])
     testdist_1 = 1
     testout_1 = list([
             [[1, 0], [1, 1]],
-            [[3, 0], [3 ,1]],
+            [[3, 0], [3, 1]],
             [[5, 1], [6, 1]],
-        ])
+            ])
 
     testin_2 = list([[1, 1], [2, 2], [3, 3], [5, 5]])
     testdist_2 = math.sqrt(2)
@@ -50,7 +53,5 @@ def main():
     check_output_equality(closest_pairs, testout_2)
     assert(dist == testdist_2)
     print("... Passed")
-    
-
 if (__name__ == "__main__"):
     main()
