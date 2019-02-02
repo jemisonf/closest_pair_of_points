@@ -2,8 +2,14 @@
 __pycache__/
 *.py[cod]
 *$py.class
+
 *.swp
-testinput-*
 .vscode/*
 
+# Test input files
+testinput-*
+test_input*
+
+# Output files
 enhanceddnc-output.txt
+test_output*
