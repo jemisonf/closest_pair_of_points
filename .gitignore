@@ -12,4 +12,5 @@ test_input*
 
 # Output files
 enhanceddnc-output.txt
+testoutput-*
 test_output*
