@@ -60,9 +60,11 @@ def closest_pair(points: List[Tuple]) -> Tuple[float, List[Tuple[Tuple]]]:
     new_min = min(delta, closest_cross[0])
     print(f"new_min: {new_min}")
     result = (new_min, [])
-    for section in [closest_left, closest_right, middle_band]:
+    for section in [closest_left, closest_right, closest_cross]:
         if section[0] == new_min:
-            result[1].extend(section[1])
+            for pair in section[1]:
+                if not any(x in result[1] for x in [pair, (pair[1], pair[0])]):
+                    result[1].append(pair)
     print(f"result: {result}")
     return result
 
@@ -80,14 +82,12 @@ def closest_cross_pair(
     print(f"min distance in cross pairs: {dm}")
     pairs = list((x, y) for x in points for y in points)
     print(f"pairs: {pairs}")
-    # for pair in pairs:
-    #     print(compute_distance(pair[0], pair[1]))
     result = list(filter(
         lambda it: compute_distance(it[0], it[1]) <= dm and it[0] != it[1],
         pairs
     ))
-    print(f"result: {result}")
-    return (dm, result)
+    final_result = (dm, result)
+    return final_result
 
 
 def compute_distance(point_a, point_b):
