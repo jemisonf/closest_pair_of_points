@@ -1,5 +1,16 @@
-__pycache__
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
 *.swp
-testinput-*
-testoutput-*
 .vscode/*
+
+# Test input files
+testinput-*
+test_input*
+
+# Output files
+naivednc-output.txt
+testoutput-*
+test_output*
