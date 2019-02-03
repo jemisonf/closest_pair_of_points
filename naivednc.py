@@ -10,7 +10,7 @@ from lib import read_inputs, write_outputs
 # of points
 def closest_pair(points):
     # Manually compute closest pair if length is 2 or 3
-    if len(points <= 3):
+    if len(points) <= 3:
         return simple_closest_pair(points)
 
     # Compute the median x value
