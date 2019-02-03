@@ -11,6 +11,6 @@ testinput-*
 test_input*
 
 # Output files
-enhanceddnc-output.txt
+naivednc-output.txt
 testoutput-*
 test_output*

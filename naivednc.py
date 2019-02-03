@@ -102,4 +102,4 @@ if __name__ == "__main__":
     except IndexError:
         exit("No input file was provided")
     result = closest_pair(inputs)
-    write_outputs('enhanceddnc-output.txt', result[0], result[1])
+    write_outputs('naivednc-output.txt', result[0], result[1])
