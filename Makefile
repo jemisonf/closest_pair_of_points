@@ -1,5 +1,5 @@
 INTERPRETER=python36
-SIZE=100000
+SIZE=10000
 
 10runsbrute: brute_force.py
 	for trial in 1 2 3 4 5 6 7 8 9 10 ; do \
@@ -20,7 +20,7 @@ SIZE=100000
 10runsenhanced: enhanced_dnc.py
 	for trial in 1 2 3 4 5 6 7 8 9 10 ; do \
 	  $(INTERPRETER) create_test_inputs.py $(SIZE) ; \
-		echo -n "Trial $$trial" >> naive_out ; \
+		echo -n "Trial $$trial" >> enhanced_out ; \
 		echo "Trial $$trial" ; \
 	 	{ time $(INTERPRETER) enhanced_dnc.py testinput-$(SIZE) testoutput-$(SIZE) ; } 2>> enhanced_out ; \
 	done
