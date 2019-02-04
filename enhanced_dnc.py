@@ -23,8 +23,8 @@ def closest_pair(points_by_x, points_by_y):
     right_half_by_y = list(filter(lambda it: it[0] > median_x, points_by_y))
 
     # Recursively call closest_pair on both halves
-    closest_left = closest_pair(left_half_by_x, points_by_y)
-    closest_right = closest_pair(right_half_by_x, points_by_y)
+    closest_left = closest_pair(left_half_by_x, left_half_by_y)
+    closest_right = closest_pair(right_half_by_x, right_half_by_y)
 
     # Find the minimum distance delta between both sides and use to make middle
     # band
